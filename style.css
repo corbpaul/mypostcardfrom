@@ -353,6 +353,10 @@ template {
 /* Base
    ========================================================================== */
 
+* {
+  box-sizing: border-box;
+}
+
 body,
 html {
   height: 100%;
@@ -364,11 +368,20 @@ html {
 }
 
 body {
-  background-color: #000;
-  color: #fff;
+  background-color: #fff;
   font-family: "Abel", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 1.125rem;
+}
+
+/* Container
+   ========================================================================== */
+
+.container {
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 60rem;
+  padding: 0 1.5rem;
 }
 
 /* Header
@@ -385,9 +398,9 @@ body {
   align-items: center;
   display: flex;
   height: 5rem;
-  justify-content: center;
   margin: 0 auto;
-  max-width: 180rem;
+  max-width: 60rem;
+  padding: 0 1.5rem;
 }
 
 .header__title {
@@ -410,11 +423,10 @@ body {
   background-image: url("./uluru.jpg");
   background-position: 50%;
   background-size: cover;
-  box-sizing: border-box;
   color: #fff;
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 60vh;
   justify-content: center;
   margin-top: -5rem;
   padding-top: 5rem;
@@ -448,6 +460,7 @@ body {
 
 @media (min-width: 768px) {
   .cover {
+    max-height: 31.25rem;
     margin-top: -8rem;
     padding-top: 8rem;
   }
